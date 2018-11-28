@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>Dangdang</display-name>
+	<welcome-file-list>
+		<welcome-file>newfileupload.html</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>NewUploadServlet</servlet-name>
+		<servlet-class>com.oraclesdp.csg.webapp.action.NewUploadServlet</servlet-class>
+		<init-param>
+			<param-name>file-upload</param-name>
+			<param-value>
+		 d:\\
+         </param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewUploadServlet</servlet-name>
+		<url-pattern>/NewUploadServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>visit</servlet-name>
+		<servlet-class>edu.hdu.web.VisitCounter</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>visit</servlet-name>
+		<url-pattern>/Servlet/VisitCounter</url-pattern>
+	</servlet-mapping>
+</web-app>

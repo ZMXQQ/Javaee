@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>Dangdang</display-name>
+  <servlet>
+    <servlet-name>voteServlet</servlet-name>
+    <servlet-class>edu.hdu.web.Vote</servlet-class>
+    <init-param>
+      <param-name>count</param-name>
+      <param-value>0</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>voteServlet</servlet-name>
+    <url-pattern>/Servlet/Vote</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>resault</servlet-name>
+    <servlet-class>edu.hdu.web.Resault</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>resault</servlet-name>
+    <url-pattern>/Servlet/Resault</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>wrong</servlet-name>
+    <servlet-class>edu.hdu.web.Wrong</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>wrong</servlet-name>
+    <url-pattern>/Servlet/Wrong</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>error</servlet-name>
+    <servlet-class>edu.hdu.web.Error</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>error</servlet-name>
+    <url-pattern>/Servlet/Error</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>vote.html</welcome-file>
+  </welcome-file-list>
+</web-app>
